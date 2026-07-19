@@ -61,6 +61,17 @@
         $(initial_nav).addClass('section-show');
       }, 350);
     }
+  } else {
+    var initial_nav = '#about';
+    if ($(initial_nav).length) {
+      $('#header').addClass('header-top');
+      $('.nav-menu .active, .mobile-nav .active').removeClass('active');
+      $('.nav-menu, .mobile-nav').find('a[href="' + initial_nav + '"]').parent('li').addClass('active');
+      setTimeout(function() {
+        $("section").removeClass('section-show');
+        $(initial_nav).addClass('section-show');
+      }, 350);
+    }
   }
 
   // Mobile Navigation
